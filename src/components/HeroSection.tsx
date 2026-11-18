@@ -1,6 +1,5 @@
 ﻿import {motion} from 'motion/react';
-import {ArrowDownRight} from 'lucide-react';
-import {BrandEmblem} from './BrandEmblem';
+import {ArrowDownRight, Sparkles} from 'lucide-react';
 import {STUDIO_IMAGES} from '../data/studioData';
 
 interface HeroSectionProps {
@@ -39,30 +38,22 @@ export function HeroSection({onBookClick}: HeroSectionProps) {
           transition={{duration: 1, delay: 1.65, ease: [0.16, 1, 0.3, 1]}}
           className="max-w-2xl"
         >
-          {/* Circular Beige Marble Brand Identity */}
-          <div className="flex items-center gap-5 mb-8">
-            <BrandEmblem size="md" variant="hero" />
-            <div className="flex flex-col">
-              <span className="font-display text-2xl sm:text-3xl tracking-[0.22em] text-[#FBF9F6] uppercase font-medium">
-                BEAUTY EYEZ
-              </span>
-              <span className="text-[11px] sm:text-xs tracking-[0.28em] text-[#DECBB8] uppercase mt-1">
-                LASH &amp; BROW STUDIO
-              </span>
-              <span className="text-xs text-[#DECBB8]/85 mt-1.5 tracking-wide">
-                Nürnberg, Deutschland
-              </span>
-            </div>
+          <div className="mb-7 flex items-center gap-3 text-[#ead1b1]">
+            <Sparkles className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
+            <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em]">Lash &amp; Brow Studio · Nürnberg</span>
           </div>
 
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.75rem] leading-[1.08] font-normal text-[#FBF9F6] tracking-tight [text-wrap:balance]">
-            Deine Schönheit verdient besondere Aufmerksamkeit.
+          <h1 className="font-display text-5xl sm:text-6xl lg:text-[4.75rem] leading-[1.04] font-normal text-[#FBF9F6] tracking-tight [text-wrap:balance]">
+            Dein Blick.<br />
+            <span className="italic text-[#e6c9a8]">Dein Moment.</span>
           </h1>
 
-          <p className="mt-5 text-base sm:text-lg text-[#EFE7DC]/90 leading-relaxed max-w-xl font-normal">
-            Professionelle Lash &amp; Brow Behandlungen in Nürnberg.
-          </p>
-
+          <div className="mt-6 flex items-start gap-4 max-w-lg">
+            <span className="mt-3 h-px w-10 shrink-0 bg-[#d4b895]" aria-hidden="true" />
+            <p className="text-base sm:text-lg text-[#f4e9dc] leading-relaxed font-normal">
+              Entdecke Lash &amp; Brow Behandlungen, die deine natürliche Schönheit zum Strahlen bringen.
+            </p>
+          </div>
           <div className="mt-9 flex flex-wrap items-center gap-5">
             <button
               type="button"
@@ -85,4 +76,5 @@ export function HeroSection({onBookClick}: HeroSectionProps) {
     </section>
   );
 }
+
 
