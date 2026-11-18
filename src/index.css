@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --color-ivory: #FBF9F6;
+  --color-cream: #F5EFE6;
+  --color-marble-light: #EFE7DC;
+  --color-marble-sand: #E4D6C5;
+  --color-nude: #DECBB8;
+  --color-champagne: #B8976B;
+  --color-champagne-dark: #9B7B52;
+  --color-warm-brown: #6E5649;
+  --color-espresso: #3B2B23;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #FBF9F6;
+    color: #3B2B23;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Subtle luxury beige marble texture background */
+.bg-marble-texture {
+  background-color: #F4EDE3;
+  background-image:
+    radial-gradient(ellipse at 18% 24%, rgba(255, 252, 248, 0.85) 0%, transparent 55%),
+    radial-gradient(ellipse at 82% 76%, rgba(214, 194, 170, 0.42) 0%, transparent 52%),
+    radial-gradient(ellipse at 50% 50%, rgba(235, 224, 210, 0.5) 0%, transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Beauty Eyez | Lash & Brow Studio",
+  "description": "Professionelle Lash & Brow Behandlungen in Nürnberg. Lash Lifting, Brow Lifting und Wimpernverlängerung.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
