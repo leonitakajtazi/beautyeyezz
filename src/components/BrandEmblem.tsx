@@ -1,4 +1,4 @@
-﻿import logo from '../assets/images/beauty-eyez-logo.jpg';
+﻿import logo from '../assets/images/about-beauty-eyez.png';
 
 interface BrandEmblemProps {
   size?: 'sm' | 'md' | 'lg';
@@ -12,7 +12,8 @@ export function BrandEmblem({size = 'md', variant = 'surface'}: BrandEmblemProps
     <span
       className={`relative inline-block rounded-full shrink-0 overflow-hidden ${dimensions} ${variant === 'hero' ? 'shadow-[0_14px_36px_rgba(32,22,16,0.28)]' : 'shadow-[0_8px_24px_rgba(92,68,56,0.10)]'}`}
     >
-      <img src={logo} alt="Beauty Eyez Lash & Brow Studio" className="absolute max-w-none" style={{width: '106.6%', height: '101.4%', left: '-2.6%', top: '-0.8%'}} />
+      <img src={logo} alt="Beauty Eyez Lash & Brow Studio" className="absolute max-w-none" style={{width: '107%', height: '110%', left: '-3%', top: '-3.3%'}} />
     </span>
   );
 }
+

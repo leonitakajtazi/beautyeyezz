@@ -60,7 +60,7 @@ export default function App() {
               transition={{duration: 0.7}}
               className="relative w-48 h-48 sm:w-56 sm:h-56 overflow-hidden rounded-full shadow-[0_12px_40px_rgba(92,68,56,0.16)]"
             >
-              <img src={loaderLogo} alt="Beauty Eyez Lash & Brow Studio" className="absolute max-w-none w-[108%] h-[108%] -left-[4%] -top-[4%]" />
+              <img src={loaderLogo} alt="Beauty Eyez Lash & Brow Studio" className="absolute max-w-none w-[107%] h-[110%] -left-[3%] -top-[3.3%]" />
             </motion.div>
             <div className="mt-8 h-px w-24 overflow-hidden bg-[#decbb8]" aria-hidden="true">
               <motion.div className="h-full w-1/2 bg-[#9b7b52]" animate={{x: ['-100%', '200%']}} transition={{duration: 1.1, repeat: Infinity, ease: 'easeInOut'}} />
@@ -89,4 +89,5 @@ export default function App() {
     </MotionConfig>
   );
 }
+
 
