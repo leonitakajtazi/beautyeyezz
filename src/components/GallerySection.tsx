@@ -37,7 +37,7 @@ export function GallerySection() {
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8">
         {/* Header & Filter Controls */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
+        <motion.div initial={{opacity: 0, x: -40}} whileInView={{opacity: 1, x: 0}} viewport={{once: true, amount: 0.2}} transition={{duration: 0.7}} className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14">
           <div className="max-w-xl">
             <span className="text-xs tracking-[0.24em] uppercase text-[#9B7B52] font-medium">
               Unsere Arbeit &amp; Galerie
@@ -72,10 +72,10 @@ export function GallerySection() {
               );
             })}
           </div>
-        </div>
+        </motion.div>
 
         {/* Interactive Before & After Comparison Feature */}
-        <div className="mb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-5 sm:p-8 bg-marble-texture border border-[#DECBB8]/80">
+        <motion.div initial={{opacity: 0, y: 35}} whileInView={{opacity: 1, y: 0}} viewport={{once: true, amount: 0.15}} transition={{duration: 0.75}} className="mb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-5 sm:p-8 bg-marble-texture border border-[#DECBB8]/80">
           <div className="lg:col-span-5">
             <span className="text-xs tracking-[0.22em] uppercase text-[#9B7B52] font-medium">
               Vorher / Nachher Vergleich
@@ -159,18 +159,19 @@ export function GallerySection() {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Portfolio Editorial Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
-          {filteredWorks.map((work) => (
+          {filteredWorks.map((work, index) => (
             <motion.button
               key={work.id}
               type="button"
               layout
-              initial={{opacity: 0}}
-              animate={{opacity: 1}}
-              transition={{duration: 0.35}}
+              initial={{opacity: 0, y: 30}}
+              whileInView={{opacity: 1, y: 0}}
+              viewport={{once: true, amount: 0.15}}
+              transition={{duration: 0.5, delay: index * 0.12}}
               onClick={() => setSelectedWork(work)}
               className="group text-left flex flex-col bg-[#F5EFE6]/60 border border-[#DECBB8]/70 p-3 hover:border-[#B8976B] transition-colors duration-200 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B8976B]"
             >
@@ -264,6 +265,7 @@ export function GallerySection() {
     </section>
   );
 }
+
 
 
 
