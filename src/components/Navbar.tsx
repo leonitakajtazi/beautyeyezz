@@ -1,5 +1,6 @@
-import {useEffect, useState} from 'react';
+﻿import {useEffect, useState} from 'react';
 import {Menu, X} from 'lucide-react';
+import {BrandEmblem} from './BrandEmblem';
 
 interface NavbarProps {
   onBookClick: () => void;
@@ -42,11 +43,12 @@ export function Navbar({onBookClick}: NavbarProps) {
         {/* Zone 1: Single-line Brand Wordmark */}
         <a
           href="#top"
-          className={`font-display text-xl sm:text-2xl tracking-[0.2em] uppercase font-medium whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B8976B] ${
+          className={`flex items-center gap-3 font-display text-xl sm:text-2xl tracking-[0.2em] uppercase font-medium whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B8976B] ${
             isScrolled || mobileOpen ? 'text-[#3B2B23]' : 'text-[#FBF9F6]'
           }`}
         >
-          BEAUTY EYEZ
+          <BrandEmblem size="sm" />
+          <span className="hidden sm:inline">BEAUTY EYEZ</span>
         </a>
 
         {/* Zone 2: 5 concise single-line nav links */}
@@ -130,3 +132,4 @@ export function Navbar({onBookClick}: NavbarProps) {
     </header>
   );
 }
+

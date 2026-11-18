@@ -1,7 +1,6 @@
-import {motion} from 'motion/react';
-import {BrandEmblem} from './BrandEmblem';
+﻿import {motion} from 'motion/react';
+import aboutImage from '../assets/images/about-beauty-eyez.png';
 import {StudioImage} from './StudioImage';
-import {STUDIO_IMAGES} from '../data/studioData';
 
 export function AboutSection() {
   return (
@@ -21,9 +20,10 @@ export function AboutSection() {
           >
             <div className="relative flex-1 min-h-[420px] lg:min-h-[540px] p-3 sm:p-4 bg-marble-texture border border-[#DECBB8]/70">
               <StudioImage
-                src={STUDIO_IMAGES.portrait}
-                alt="Beauty Eyez Studio Ästhetik — Natürliche feminine Ausstrahlung"
-                className="w-full h-full min-h-[390px] lg:min-h-full"
+                src={aboutImage}
+                alt="Beauty Eyez Lash & Brow Studio Logo auf Marmor"
+                className="w-full h-full min-h-[390px] lg:min-h-full flex items-center"
+                imgClassName="object-contain"
                 fallbackLabel="Beauty Eyez Atelier"
               />
             </div>
@@ -41,7 +41,6 @@ export function AboutSection() {
             className="lg:col-span-7 flex flex-col justify-center"
           >
             <div className="flex items-center gap-4 mb-6">
-              <BrandEmblem size="sm" variant="surface" />
               <span className="text-xs tracking-[0.24em] uppercase text-[#9B7B52] font-medium">
                 Über Beauty Eyez
               </span>
@@ -92,3 +91,4 @@ export function AboutSection() {
     </section>
   );
 }
+

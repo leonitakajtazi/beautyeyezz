@@ -1,3 +1,7 @@
+﻿import wimpernClient from '../assets/images/wimpernverlaengerung-client.jpg';
+import browLiftingClient from '../assets/images/brow-lifting-client.jpg';
+import lashLiftingClient from '../assets/images/lash-lifting-client.jpg';
+
 export type ServiceId = 'lash-lifting' | 'brow-lifting' | 'wimpernverlaengerung';
 
 export interface StudioService {
@@ -58,7 +62,7 @@ export const STUDIO_SERVICES: StudioService[] = [
     title: 'Lash Lifting',
     subtitle: 'Natürlicher Schwung vom Ansatz an',
     description:
-      'Sanfte Formung und Anhebung der eigenen Naturwimpern für einen wachen, offenen Blick – ganz ohne künstliche Extensions. Jede Behandlung wird auf die individuelle Wimpernlänge und Augenform abgestimmt.',
+      'Sanft geliftete Naturwimpern für einen offenen, frischen Blick.',
     highlights: [
       'Harmonischer Schwung für die eigenen Naturwimpern',
       'Optional mit tiefschwarzer Färbung und pflegender Versiegelung',
@@ -66,7 +70,7 @@ export const STUDIO_SERVICES: StudioService[] = [
     ],
     pricePlaceholder: 'Individuelle Preisauskunft auf Anfrage',
     durationPlaceholder: 'Entspannte Einzelbehandlung inkl. Beratung',
-    image: STUDIO_IMAGES.lashLifting,
+    image: lashLiftingClient,
     imageAlt: 'Lash Lifting Ergebnis mit geschwungenen, glänzenden Naturwimpern bei Beauty Eyez Nürnberg',
   },
   {
@@ -75,7 +79,7 @@ export const STUDIO_SERVICES: StudioService[] = [
     title: 'Brow Lifting',
     subtitle: 'Definierte, weich geformte Brauenarchitektur',
     description:
-      'Präzises Ausrichten und Fixieren der Augenbrauenhärchen für mehr Fülle, Symmetrie und ein gepflegtes Finish. Die natürliche Gesichtsform steht dabei stets im Mittelpunkt.',
+      'Form und Fülle für gepflegte, natürlich definierte Augenbrauen.',
     highlights: [
       'Individuelle Vermessung und Formgebung der Brauenlinie',
       'Sanfte Laminierung für kontrollierte, federleichte Struktur',
@@ -83,7 +87,7 @@ export const STUDIO_SERVICES: StudioService[] = [
     ],
     pricePlaceholder: 'Individuelle Preisauskunft auf Anfrage',
     durationPlaceholder: 'Präzise Formgebung inklusive Styling',
-    image: STUDIO_IMAGES.browLifting,
+    image: browLiftingClient,
     imageAlt: 'Brow Lifting Ergebnis mit harmonisch geformten Augenbrauen im Beauty Eyez Studio',
   },
   {
@@ -92,7 +96,7 @@ export const STUDIO_SERVICES: StudioService[] = [
     title: 'Wimpernverlängerung',
     subtitle: 'Maßgeschneiderte Fülle und federleichte Eleganz',
     description:
-      'Sorgfältige Applikation feinster Wimpernextensions – individuell abgestimmt auf Augenform, Wimpernstruktur und Ihren gewünschten Ausdruck, von zart-natürlich bis ausdrucksstark.',
+      'Individuelle Wimpernextensions für natürliche bis ausdrucksstarke Fülle.',
     highlights: [
       'Präzise Einzel- oder Volumentechnik nach persönlicher Beratung',
       'Hoher Tragekomfort durch abgestimmte Längen und Biegungen',
@@ -100,7 +104,7 @@ export const STUDIO_SERVICES: StudioService[] = [
     ],
     pricePlaceholder: 'Preis je nach gewünschtem Set auf Anfrage',
     durationPlaceholder: 'Ausführliche Einzeltermin-Behandlung',
-    image: STUDIO_IMAGES.wimpernverlaengerung,
+    image: wimpernClient,
     imageAlt: 'Wimpernverlängerung in entspannter Studio-Atmosphäre bei Beauty Eyez in Nürnberg',
   },
 ];
@@ -112,7 +116,7 @@ export const GALLERY_WORKS: GalleryWorkItem[] = [
     categoryLabel: 'Lash Lifting',
     title: 'Sanfter Schwung & Glanz',
     caption: 'Natürliche Anhebung der eigenen Wimpern für einen frischen, offenen Augenaufschlag.',
-    image: STUDIO_IMAGES.lashLifting,
+    image: lashLiftingClient,
     imageAlt: 'Lash Lifting Portfolio Aufnahme',
     aspect: 'landscape',
   },
@@ -122,7 +126,7 @@ export const GALLERY_WORKS: GalleryWorkItem[] = [
     categoryLabel: 'Brow Lifting',
     title: 'Fein definierte Brauenlinie',
     caption: 'Ausgeglichene Symmetrie und weiche Textur unter Beibehaltung der natürlichen Dichte.',
-    image: STUDIO_IMAGES.browLifting,
+    image: browLiftingClient,
     imageAlt: 'Brow Lifting Portfolio Aufnahme',
     aspect: 'landscape',
   },
@@ -132,19 +136,9 @@ export const GALLERY_WORKS: GalleryWorkItem[] = [
     categoryLabel: 'Wimpernverlängerung',
     title: 'Federleichte Fülle',
     caption: 'Detailgenaue Applikation für einen harmonischen Übergang und angenehmes Tragegefühl.',
-    image: STUDIO_IMAGES.wimpernverlaengerung,
+    image: wimpernClient,
     imageAlt: 'Wimpernverlängerung Portfolio Aufnahme',
     aspect: 'landscape',
-  },
-  {
-    id: 'work-4',
-    category: 'lash-lifting',
-    categoryLabel: 'Lash & Brow Harmonie',
-    title: 'Abgestimmtes Gesamtprofil',
-    caption: 'Zusammenspiel aus gelifteten Wimpern und sauber konturierten Brauen.',
-    image: STUDIO_IMAGES.portrait,
-    imageAlt: 'Editorial Porträt mit Lash und Brow Veredelung',
-    aspect: 'portrait',
   },
 ];
 
@@ -180,3 +174,9 @@ export const WHY_BEAUTY_EYEZ_PILLARS: PillarItem[] = [
       'Unser Anspruch ist kein überladener Effekt, sondern eine stimmige Veredelung, die Ihre eigene Ausstrahlung hervorhebt.',
   },
 ];
+
+
+
+
+
+

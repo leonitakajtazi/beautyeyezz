@@ -1,10 +1,11 @@
+﻿import beforeImage from '../assets/images/comparison-before.jpg';
+import afterImage from '../assets/images/comparison-after.jpg';
 import {useState} from 'react';
 import {motion} from 'motion/react';
 import {Instagram, MoveHorizontal, X, ZoomIn} from 'lucide-react';
 import {
   GALLERY_WORKS,
   STUDIO_CONTACT,
-  STUDIO_IMAGES,
   type GalleryWorkItem,
   type ServiceId,
 } from '../data/studioData';
@@ -106,13 +107,13 @@ export function GallerySection() {
           </div>
 
           <div className="lg:col-span-7">
-            <div className="relative aspect-[16/10] w-full overflow-hidden border border-[#DECBB8] bg-[#EFE7DC] select-none">
+            <div className="relative aspect-[1454/640] w-full overflow-hidden border border-[#DECBB8] bg-[#EFE7DC] select-none">
               {/* After Layer (Full Luminous Result) */}
               <img
-                src={STUDIO_IMAGES.hero}
+                src={afterImage}
                 alt="Nachher: Veredelte Wimpern und definierte Augenbrauen"
                 referrerPolicy="no-referrer"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain"
               />
 
               {/* Before Layer (Muted, Lower Contrast Natural Preview clipped by sliderPosition) */}
@@ -121,10 +122,10 @@ export function GallerySection() {
                 style={{clipPath: `inset(0 ${100 - sliderPosition}% 0 0)`}}
               >
                 <img
-                  src={STUDIO_IMAGES.hero}
+                  src={beforeImage}
                   alt="Vorher: Ungeschminkter Naturzustand vor der Behandlung"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover brightness-[0.94] contrast-[0.78] saturate-[0.75] blur-[0.4px]"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
@@ -161,7 +162,7 @@ export function GallerySection() {
         </div>
 
         {/* Portfolio Editorial Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
           {filteredWorks.map((work) => (
             <motion.button
               key={work.id}
@@ -263,3 +264,6 @@ export function GallerySection() {
     </section>
   );
 }
+
+
+

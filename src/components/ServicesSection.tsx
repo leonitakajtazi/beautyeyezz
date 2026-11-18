@@ -1,4 +1,4 @@
-import {motion} from 'motion/react';
+﻿import {motion} from 'motion/react';
 import {ArrowRight} from 'lucide-react';
 import {STUDIO_SERVICES, type ServiceId} from '../data/studioData';
 import {StudioImage} from './StudioImage';
@@ -23,9 +23,7 @@ export function ServicesSection({onSelectService}: ServicesSectionProps) {
             Abgestimmte Behandlungen für Wimpern &amp; Augenbrauen
           </h2>
           <p className="mt-4 text-[15px] sm:text-base text-[#5C4438] leading-relaxed">
-            Jede Behandlung wird individuell auf Ihre Haarstruktur und gewünschte Intensität
-            abgestimmt. Aktuelle Konditionen erhalten Sie jederzeit auf Anfrage oder direkt bei
-            der Terminabstimmung.
+            Individuell abgestimmt auf Ihren Look. Preise auf Anfrage.
           </p>
         </div>
 
@@ -44,15 +42,15 @@ export function ServicesSection({onSelectService}: ServicesSectionProps) {
               >
                 {/* Treatment Photography */}
                 <div
-                  className={`lg:col-span-6 ${
+                  className={`lg:col-span-5 w-full max-w-md mx-auto ${
                     isReversed ? 'lg:order-2' : 'lg:order-1'
                   }`}
                 >
-                  <div className="h-full min-h-[290px] sm:min-h-[360px] p-2.5 sm:p-3 bg-[#FBF9F6] border border-[#DECBB8]/70">
+                  <div className="h-full  p-2.5 sm:p-3 bg-[#FBF9F6] border border-[#DECBB8]/70">
                     <StudioImage
                       src={service.image}
                       alt={service.imageAlt}
-                      className="w-full h-full aspect-[4/3] lg:aspect-auto lg:min-h-[380px]"
+                      className="w-full aspect-[4/3]"
                       imgClassName="hover:scale-[1.02]"
                       fallbackLabel={service.title}
                     />
@@ -61,7 +59,7 @@ export function ServicesSection({onSelectService}: ServicesSectionProps) {
 
                 {/* Treatment Editorial Details & Price Placeholder */}
                 <div
-                  className={`lg:col-span-6 flex flex-col justify-center ${
+                  className={`lg:col-span-7 flex flex-col justify-center ${
                     isReversed ? 'lg:order-1' : 'lg:order-2'
                   }`}
                 >
@@ -82,20 +80,7 @@ export function ServicesSection({onSelectService}: ServicesSectionProps) {
                     {service.description}
                   </p>
 
-                  <ul className="mt-6 space-y-2.5 border-t border-[#DECBB8]/60 pt-5">
-                    {service.highlights.map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-start gap-3 text-sm text-[#5C4438]"
-                      >
-                        <span
-                          className="mt-2 w-1.5 h-[1px] bg-[#B8976B] shrink-0"
-                          aria-hidden="true"
-                        />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+
 
                   {/* Transparent Editable Price & Duration Block (no invented prices) */}
                   <div className="mt-7 p-4 sm:p-5 bg-[#FBF9F6] border border-[#DECBB8]/80 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -136,3 +121,5 @@ export function ServicesSection({onSelectService}: ServicesSectionProps) {
     </section>
   );
 }
+
+
