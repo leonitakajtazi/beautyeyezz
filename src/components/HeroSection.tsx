@@ -49,7 +49,6 @@ export function HeroSection({onBookClick}: HeroSectionProps) {
           </h1>
 
           <div className="mt-6 flex items-start gap-4 max-w-lg">
-            <span className="mt-3 h-px w-10 shrink-0 bg-[#d4b895]" aria-hidden="true" />
             <p className="text-base sm:text-lg text-[#f4e9dc] leading-relaxed font-normal">
               Entdecke Lash &amp; Brow Behandlungen, die deine natürliche Schönheit zum Strahlen bringen.
             </p>
@@ -76,6 +75,7 @@ export function HeroSection({onBookClick}: HeroSectionProps) {
     </section>
   );
 }
+
 
 
 

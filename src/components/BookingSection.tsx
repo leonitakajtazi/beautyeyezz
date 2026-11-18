@@ -1,4 +1,4 @@
-import {useEffect, useState, type FormEvent} from 'react';
+﻿import {useEffect, useState, type FormEvent} from 'react';
 import {Calendar, CheckCircle2, Copy, Check, Instagram} from 'lucide-react';
 import {STUDIO_CONTACT, STUDIO_SERVICES, type ServiceId} from '../data/studioData';
 
@@ -79,8 +79,7 @@ export function BookingSection({selectedService, onServiceChange}: BookingSectio
               Ihren Wunschtermin persönlich anfragen
             </h2>
             <p className="mt-5 text-[15px] sm:text-base text-[#5C4438] leading-relaxed">
-              Wählen Sie Ihre gewünschte Behandlung und Ihr bevorzugtes Zeitfenster aus. Wir
-              stimmen den Termin individuell und persönlich mit Ihnen ab.
+              Wählen Sie Ihre Behandlung und senden Sie uns Ihre Anfrage ganz einfach über Instagram.
             </p>
 
             {/* Instagram Booking Card */}
@@ -114,40 +113,20 @@ export function BookingSection({selectedService, onServiceChange}: BookingSectio
           {/* Right Appointment Request Form */}
           <div className="lg:col-span-7 bg-[#FBF9F6] border border-[#DECBB8]/85 p-6 sm:p-10">
             {!submitted ? (
-              <form onSubmit={handleSubmit} noValidate className="space-y-6">
+              <form onSubmit={handleSubmit} noValidate className="space-y-5">
                 <div className="flex items-center justify-between gap-4 border-b border-[#EFE7DC] pb-4">
                   <h3 className="font-display text-2xl text-[#3B2B23]">
-                    Terminanfrage senden
+                    Terminanfrage vorbereiten
                   </h3>
                   <Calendar className="w-5 h-5 text-[#B8976B]" aria-hidden="true" />
                 </div>
 
-                {/* Treatment Choice */}
                 <div>
-                  <label className="block text-xs tracking-[0.16em] uppercase text-[#6E5649] mb-2.5">
-                    Gewünschte Behandlung
-                  </label>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                    {SERVICE_OPTIONS.map((option) => {
-                      const active = selectedService === option.value;
-                      return (
-                        <button
-                          key={option.value}
-                          type="button"
-                          onClick={() => onServiceChange(option.value)}
-                          className={`px-4 py-3 text-left text-sm border transition-colors cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-[#B8976B] ${
-                            active
-                              ? 'bg-[#3B2B23] text-[#FBF9F6] border-[#3B2B23]'
-                              : 'bg-[#FBF9F6] text-[#3B2B23] border-[#DECBB8] hover:border-[#B8976B]'
-                          }`}
-                        >
-                          {option.label}
-                        </button>
-                      );
-                    })}
-                  </div>
+                  <label htmlFor="booking-service" className="block text-xs tracking-[0.16em] uppercase text-[#6E5649] mb-2">Behandlung</label>
+                  <select id="booking-service" value={selectedService} onChange={(e) => onServiceChange(e.target.value as ServiceId | 'kombi' | 'beratung')} className="w-full px-4 py-3 bg-[#FBF9F6] border border-[#DECBB8] text-sm text-[#3B2B23] focus:outline-none focus:border-[#3B2B23]">
+                    {SERVICE_OPTIONS.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
+                  </select>
                 </div>
-
                 {/* Name & Contact */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
@@ -186,6 +165,9 @@ export function BookingSection({selectedService, onServiceChange}: BookingSectio
                   </div>
                 </div>
 
+                <details className="group border-t border-[#EFE7DC] pt-4">
+                  <summary className="cursor-pointer text-sm text-[#6E5649]">Wunschtermin und Hinweise (optional)</summary>
+                  <div className="mt-5 space-y-5">
                 {/* Date & Time Window */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
@@ -243,6 +225,9 @@ export function BookingSection({selectedService, onServiceChange}: BookingSectio
                   />
                 </div>
 
+                  </div>
+                </details>
+
                 {errorMsg && (
                   <p role="alert" className="text-sm text-[#8A3B2B] font-medium">
                     {errorMsg}
@@ -254,10 +239,10 @@ export function BookingSection({selectedService, onServiceChange}: BookingSectio
                     type="submit"
                     className="px-8 py-4 bg-[#3B2B23] text-[#FBF9F6] text-xs tracking-[0.18em] uppercase font-medium hover:bg-[#5C4438] transition-colors whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B8976B]"
                   >
-                    Termin anfragen
+                    Anfrage vorbereiten
                   </button>
                   <span className="text-xs text-[#6E5649]">
-                    Unverbindliche Anfrage · Persönliche Rückmeldung
+                    Anschließend über Instagram senden
                   </span>
                 </div>
               </form>
@@ -336,3 +321,4 @@ export function BookingSection({selectedService, onServiceChange}: BookingSectio
     </section>
   );
 }
+
