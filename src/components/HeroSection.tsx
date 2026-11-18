@@ -1,4 +1,4 @@
-import {motion} from 'motion/react';
+﻿import {motion} from 'motion/react';
 import {ArrowDownRight} from 'lucide-react';
 import {BrandEmblem} from './BrandEmblem';
 import {STUDIO_IMAGES} from '../data/studioData';
@@ -34,9 +34,9 @@ export function HeroSection({onBookClick}: HeroSectionProps) {
       {/* Hero Editorial Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 pt-28 pb-16 sm:py-28">
         <motion.div
-          initial={{opacity: 0, y: 18}}
-          animate={{opacity: 1, y: 0}}
-          transition={{duration: 0.75, ease: [0.16, 1, 0.3, 1]}}
+          initial={{opacity: 0, x: -70}}
+          animate={{opacity: 1, x: 0}}
+          transition={{duration: 1, delay: 1.65, ease: [0.16, 1, 0.3, 1]}}
           className="max-w-2xl"
         >
           {/* Circular Beige Marble Brand Identity */}
@@ -85,3 +85,4 @@ export function HeroSection({onBookClick}: HeroSectionProps) {
     </section>
   );
 }
+

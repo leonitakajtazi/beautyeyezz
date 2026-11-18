@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import {useEffect, useState} from 'react';
+import {useEffect, useState, type ReactNode} from 'react';
 import {AnimatePresence, MotionConfig, motion} from 'motion/react';
 import loaderLogo from './assets/images/about-beauty-eyez.png';
 import {Navbar} from './components/Navbar';
@@ -18,6 +18,18 @@ import {ContactSection} from './components/ContactSection';
 import {Footer} from './components/Footer';
 import type {ServiceId} from './data/studioData';
 
+function SectionReveal({children}: {children: ReactNode}) {
+  return (
+    <motion.div
+      initial={{opacity: 0, y: 24}}
+      whileInView={{opacity: 1, y: 0}}
+      viewport={{once: true, amount: 0.05}}
+      transition={{duration: 0.65, ease: [0.16, 1, 0.3, 1]}}
+    >
+      {children}
+    </motion.div>
+  );
+}
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -73,21 +85,22 @@ export default function App() {
         <Navbar onBookClick={scrollToBooking} />
         <main className="flex-1">
           <HeroSection onBookClick={scrollToBooking} />
-          <AboutSection />
-          <ServicesSection onSelectService={handleSelectServiceAndBook} />
-          <GallerySection />
-          <CeoConventionSection />
-          <WhyBeautyEyezSection />
-          <BookingSection
+          <SectionReveal><AboutSection /></SectionReveal>
+          <SectionReveal><ServicesSection onSelectService={handleSelectServiceAndBook} /></SectionReveal>
+          <SectionReveal><GallerySection /></SectionReveal>
+          <SectionReveal><CeoConventionSection /></SectionReveal>
+          <SectionReveal><WhyBeautyEyezSection /></SectionReveal>
+          <SectionReveal><BookingSection
             selectedService={selectedService}
             onServiceChange={setSelectedService}
-          />
-          <ContactSection />
+          /></SectionReveal>
+          <SectionReveal><ContactSection /></SectionReveal>
         </main>
-        <Footer />
+        <SectionReveal><Footer /></SectionReveal>
       </div>
     </MotionConfig>
   );
 }
+
 
 
