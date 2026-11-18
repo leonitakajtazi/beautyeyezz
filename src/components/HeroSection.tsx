@@ -10,7 +10,7 @@ export function HeroSection({onBookClick}: HeroSectionProps) {
   return (
     <section
       id="top"
-      className="relative min-h-[94vh] flex items-end sm:items-center overflow-hidden bg-[#2A1E18]"
+      className="relative min-h-[100svh] sm:min-h-[94vh] flex items-center overflow-hidden bg-[#2A1E18]"
     >
       {/* Full-screen editorial lash & brow photography */}
       <img
@@ -31,7 +31,7 @@ export function HeroSection({onBookClick}: HeroSectionProps) {
       />
 
       {/* Hero Editorial Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 pt-28 pb-16 sm:py-28">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 pt-24 pb-10 sm:py-28">
         <motion.div
           initial={{opacity: 0, x: -70}}
           animate={{opacity: 1, x: 0}}
@@ -76,5 +76,6 @@ export function HeroSection({onBookClick}: HeroSectionProps) {
     </section>
   );
 }
+
 
 
