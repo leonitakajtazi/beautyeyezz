@@ -1,4 +1,10 @@
-﻿import wimpernClient from '../assets/images/wimpernverlaengerung-client.jpg';
+﻿import image_ceoConvention from '../assets/images/ceo_convention_editorial_1795020001520.jpg';
+import image_portrait from '../assets/images/gallery_transformation_portrait_1795020001811.jpg';
+import image_wimpernverlaengerung from '../assets/images/service_wimpernverlaengerung_1795020001636.jpg';
+import image_browLifting from '../assets/images/service_brow_lifting_1795020001358.jpg';
+import image_lashLifting from '../assets/images/service_lash_lifting_1795019999911.jpg';
+import image_hero from '../assets/images/hero_lash_brow_editorial_1795019999999.jpg';
+import wimpernClient from '../assets/images/wimpernverlaengerung-client.jpg';
 import browLiftingClient from '../assets/images/brow-lifting-client.jpg';
 import lashLiftingClient from '../assets/images/lash-lifting-client.jpg';
 
@@ -35,12 +41,12 @@ export interface PillarItem {
 }
 
 export const STUDIO_IMAGES = {
-  hero: '/src/assets/images/hero_lash_brow_editorial_1795019999999.jpg',
-  lashLifting: '/src/assets/images/service_lash_lifting_1795019999911.jpg',
-  browLifting: '/src/assets/images/service_brow_lifting_1795020001358.jpg',
-  wimpernverlaengerung: '/src/assets/images/service_wimpernverlaengerung_1795020001636.jpg',
-  portrait: '/src/assets/images/gallery_transformation_portrait_1795020001811.jpg',
-  ceoConvention: '/src/assets/images/ceo_convention_editorial_1795020001520.jpg',
+  hero: image_hero,
+  lashLifting: image_lashLifting,
+  browLifting: image_browLifting,
+  wimpernverlaengerung: image_wimpernverlaengerung,
+  portrait: image_portrait,
+  ceoConvention: image_ceoConvention,
 } as const;
 
 export const STUDIO_CONTACT = {
@@ -174,6 +180,7 @@ export const WHY_BEAUTY_EYEZ_PILLARS: PillarItem[] = [
       'Unser Anspruch ist kein überladener Effekt, sondern eine stimmige Veredelung, die Ihre eigene Ausstrahlung hervorhebt.',
   },
 ];
+
 
 
 
