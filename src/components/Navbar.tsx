@@ -39,16 +39,16 @@ export function Navbar({onBookClick}: NavbarProps) {
           : 'bg-gradient-to-b from-[#231813]/55 to-transparent text-[#FBF9F6]'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between gap-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-8">
         {/* Zone 1: Single-line Brand Wordmark */}
         <a
           href="#top"
-          className={`flex items-center gap-3 font-display text-xl sm:text-2xl tracking-[0.2em] uppercase font-medium whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B8976B] ${
+          className={`flex items-center gap-2 sm:gap-3 font-display text-base sm:text-2xl tracking-[0.12em] sm:tracking-[0.2em] uppercase font-medium whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B8976B] ${
             isScrolled || mobileOpen ? 'text-[#3B2B23]' : 'text-[#FBF9F6]'
           }`}
         >
           <BrandEmblem size="sm" />
-          <span className="hidden sm:inline">BEAUTY EYEZ</span>
+          <span>BEAUTY EYEZ</span>
         </a>
 
         {/* Zone 2: 5 concise single-line nav links */}
@@ -132,4 +132,5 @@ export function Navbar({onBookClick}: NavbarProps) {
     </header>
   );
 }
+
 
