@@ -167,19 +167,8 @@ export const WHY_BEAUTY_EYEZ_PILLARS: PillarItem[] = [
     description:
       'Spezialisierte Techniken rund um Lash Lifting, Brow Lifting und Wimpernverlängerung – abgestimmt auf die Empfindlichkeit der Augenpartie.',
   },
-  {
-    index: '04.',
-    title: 'Liebe zum kleinsten Detail',
-    description:
-      'Vom exakten Winkel einzelner Härchen bis zur entspannten Atmosphäre im Studio zählt jede Nuance.',
-  },
-  {
-    index: '05.',
-    title: 'Unterstreichung der natürlichen Schönheit',
-    description:
-      'Unser Anspruch ist kein überladener Effekt, sondern eine stimmige Veredelung, die Ihre eigene Ausstrahlung hervorhebt.',
-  },
 ];
+
 
 
 
